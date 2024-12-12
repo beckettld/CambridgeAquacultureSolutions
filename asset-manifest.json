@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CambridgeAquacultureSolutions/static/css/main.b49725e3.css",
-    "main.js": "/CambridgeAquacultureSolutions/static/js/main.41379087.js",
+    "main.css": "/CambridgeAquacultureSolutions/static/css/main.5f782b0e.css",
+    "main.js": "/CambridgeAquacultureSolutions/static/js/main.a9515900.js",
     "static/js/488.d42afc3e.chunk.js": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js",
     "static/media/waterCV.png": "/CambridgeAquacultureSolutions/static/media/waterCV.68ba1c015e7d95ba5fb7.png",
     "index.html": "/CambridgeAquacultureSolutions/index.html",
-    "main.b49725e3.css.map": "/CambridgeAquacultureSolutions/static/css/main.b49725e3.css.map",
-    "main.41379087.js.map": "/CambridgeAquacultureSolutions/static/js/main.41379087.js.map",
+    "main.5f782b0e.css.map": "/CambridgeAquacultureSolutions/static/css/main.5f782b0e.css.map",
+    "main.a9515900.js.map": "/CambridgeAquacultureSolutions/static/js/main.a9515900.js.map",
     "488.d42afc3e.chunk.js.map": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b49725e3.css",
-    "static/js/main.41379087.js"
+    "static/css/main.5f782b0e.css",
+    "static/js/main.a9515900.js"
   ]
 }
