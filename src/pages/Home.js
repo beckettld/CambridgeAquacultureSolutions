@@ -39,7 +39,7 @@ const Home = () => {
     <div className="home-container">
       {/* Left Container */}
       <div className="left-container">
-        <h2>Accurate Bacteria Counts & Types, Instantly</h2>
+        <h2>Direct Bacteria Analysis, No Guesswork Required</h2>
         <p>
         Leveraging computer vision technology, our sensors can <strong>directly count and identify the bacteria strains</strong> in your sample. Say goodbye to outdated, indirect sampling methods and say hello to the new age of direct bacteria identification.
         </p>

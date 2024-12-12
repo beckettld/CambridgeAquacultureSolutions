@@ -80,3 +80,25 @@
     border-radius: 5px;
   }
   
+  /* Media Query for Phones */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .left-container,
+  .right-container {
+    margin-bottom: 20px; /* Add space between stacked sections */
+  }
+
+  .image-grid {
+    flex-direction: column; /* Stack images vertically if needed */
+    gap: 10px;
+  }
+
+  .square-image {
+    width: 80%; /* Adjust size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center images */
+  }
+}
