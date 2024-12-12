@@ -60,3 +60,23 @@
     background-color: #0056b3;
   }
   
+  .images-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+    margin-top: 10px;
+  }
+  
+  .square-image {
+    width: 40%; /* Adjust as needed */
+    height: 40%; /* Ensures a square shape */
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
