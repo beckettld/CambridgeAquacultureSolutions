@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/CambridgeAquacultureSolutions/static/css/main.fad8b6e8.css",
-    "main.js": "/CambridgeAquacultureSolutions/static/js/main.e1e2873a.js",
+    "main.css": "/CambridgeAquacultureSolutions/static/css/main.179aaf47.css",
+    "main.js": "/CambridgeAquacultureSolutions/static/js/main.b66a6434.js",
     "static/js/488.d42afc3e.chunk.js": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js",
     "static/media/ocean.jpg": "/CambridgeAquacultureSolutions/static/media/ocean.92082ff00ef20b219cee.jpg",
+    "static/media/cube-scan.svg": "/CambridgeAquacultureSolutions/static/media/cube-scan.8231162726f6d8dd59db611e17b6c659.svg",
     "index.html": "/CambridgeAquacultureSolutions/index.html",
-    "main.fad8b6e8.css.map": "/CambridgeAquacultureSolutions/static/css/main.fad8b6e8.css.map",
-    "main.e1e2873a.js.map": "/CambridgeAquacultureSolutions/static/js/main.e1e2873a.js.map",
+    "static/media/money-square.svg": "/CambridgeAquacultureSolutions/static/media/money-square.5f1648c590d91144239f04adcfbe53c4.svg",
+    "static/media/timer.svg": "/CambridgeAquacultureSolutions/static/media/timer.e1bac27bd0c49f8054370509141e342c.svg",
+    "main.179aaf47.css.map": "/CambridgeAquacultureSolutions/static/css/main.179aaf47.css.map",
+    "main.b66a6434.js.map": "/CambridgeAquacultureSolutions/static/js/main.b66a6434.js.map",
     "488.d42afc3e.chunk.js.map": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fad8b6e8.css",
-    "static/js/main.e1e2873a.js"
+    "static/css/main.179aaf47.css",
+    "static/js/main.b66a6434.js"
   ]
 }
