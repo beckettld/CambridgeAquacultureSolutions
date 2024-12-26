@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/CambridgeAquacultureSolutions/static/css/main.179aaf47.css",
-    "main.js": "/CambridgeAquacultureSolutions/static/js/main.b66a6434.js",
+    "main.css": "/CambridgeAquacultureSolutions/static/css/main.15117c71.css",
+    "main.js": "/CambridgeAquacultureSolutions/static/js/main.ac7a8348.js",
     "static/js/488.d42afc3e.chunk.js": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js",
+    "static/media/wastewater.jpg": "/CambridgeAquacultureSolutions/static/media/wastewater.4156beea261d1e7b2afe.jpg",
+    "static/media/environmental.jpg": "/CambridgeAquacultureSolutions/static/media/environmental.3223d2335e6c1249522f.jpg",
+    "static/media/military.jpg": "/CambridgeAquacultureSolutions/static/media/military.4b5df6ed58fc5b95de53.jpg",
+    "static/media/medical.jpg": "/CambridgeAquacultureSolutions/static/media/medical.2db11a0c8f62cb5f8f09.jpg",
     "static/media/ocean.jpg": "/CambridgeAquacultureSolutions/static/media/ocean.92082ff00ef20b219cee.jpg",
+    "static/media/aquaculture.jpg": "/CambridgeAquacultureSolutions/static/media/aquaculture.fd33b63ddccf41998979.jpg",
+    "static/media/product.JPG": "/CambridgeAquacultureSolutions/static/media/product.ed57b0c2c784ff8f43f3.JPG",
     "static/media/cube-scan.svg": "/CambridgeAquacultureSolutions/static/media/cube-scan.8231162726f6d8dd59db611e17b6c659.svg",
     "index.html": "/CambridgeAquacultureSolutions/index.html",
     "static/media/money-square.svg": "/CambridgeAquacultureSolutions/static/media/money-square.5f1648c590d91144239f04adcfbe53c4.svg",
     "static/media/timer.svg": "/CambridgeAquacultureSolutions/static/media/timer.e1bac27bd0c49f8054370509141e342c.svg",
-    "main.179aaf47.css.map": "/CambridgeAquacultureSolutions/static/css/main.179aaf47.css.map",
-    "main.b66a6434.js.map": "/CambridgeAquacultureSolutions/static/js/main.b66a6434.js.map",
+    "main.15117c71.css.map": "/CambridgeAquacultureSolutions/static/css/main.15117c71.css.map",
+    "main.ac7a8348.js.map": "/CambridgeAquacultureSolutions/static/js/main.ac7a8348.js.map",
     "488.d42afc3e.chunk.js.map": "/CambridgeAquacultureSolutions/static/js/488.d42afc3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.179aaf47.css",
-    "static/js/main.b66a6434.js"
+    "static/css/main.15117c71.css",
+    "static/js/main.ac7a8348.js"
   ]
 }
