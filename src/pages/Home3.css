@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.home-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow-y: auto; /* Allow independent vertical scrolling */
+    padding: 20px;
+  }
+  
+  .transparent-box {
+    margin-top: 25%;
+    width: 60%; /* Restrict width to 60% of the right half */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    border-radius: 8px;
+  }
+  
+  .transparent-box h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .transparent-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .email-form {
+    display: flex;
+    align-items: center; /* Keep input and button aligned horizontally */
+    gap: 10px; /* Space between input and button */
+  }
+  
+  .email-form input {
+    flex: 1; /* Allow input to take the remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .email-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .email-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    padding-right: 40px;
+  }
+  
+  .modal-content .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .modal-content .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-content .form-group input,
+  .modal-content .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-modal {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .close-modal:hover {
+    color: #0056b3;
+  }
+  
+  .learn-more {
+    margin-top: 20px;
+    /*color: #007bff;*/
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  
+  .more-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .key-benefits {
+    margin-top: 20px;
+  }
+  
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .icon-square {
+    width: 20px;
+    height: 20px;
+    background-color: #007bff; /* Example color for the square icon */
+    margin-right: 10px;
+    border-radius: 3px; /* Optional: Make the square slightly rounded */
+    align-self: center;
+  }
+  
+  .benefit-item p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    align-items: center;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .use-cases-list {
+    line-height: 1.6;
+  }
+
+  
+  
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .home-container {
+      flex-direction: column; /* Stack sections vertically */
+      height: auto; /* Allow the entire page to be scrollable */
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+  
+    .left-section {
+      flex: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30%; /* Add spacing for the product image */
+      margin-bottom: 30%; /* Adjust spacing for better fit */
+    }
+  
+    .product-image {
+      max-width: 90%; /* Adjust image width for smaller screens */
+      height: auto;
+    }
+  
+    .right-section {
+      flex: none;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Align content to the top */
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      width: 100%; /* Take full width of the viewport */
+      min-height: 100vh; /* Ensure the shaded area always fills the screen */
+      box-sizing: border-box; /* Include padding in the height calculation */
+    }
+  
+    .transparent-box {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 600px; /* Optional: Limit max width for readability */
+      margin-top: 0; /* Remove extra top margin for mobile */
+      padding: 15px; /* Reduce padding for better fit */
+      margin-bottom: 20px; /* Add spacing below for readability */
+    }
+  
+    .transparent-box h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      margin-bottom: 10px;
+    }
+  
+    .transparent-box p {
+      font-size: 1rem; /* Adjust font size for readability */
+      margin-bottom: 15px;
+    }
+  
+    .email-form {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      gap: 5px; /* Adjust gap for smaller viewports */
+    }
+  
+    .email-form input {
+      flex: 1; /* Allow input to take up full width if necessary */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 50%; /* Ensure input stays readable on small screens */
+    }
+  
+    .email-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .learn-more {
+      margin-top: 20px;
+      font-size: 1rem;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  
+    .more-info {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.5;
+    }
+  }
+  
+  

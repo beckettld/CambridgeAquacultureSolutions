@@ -1,104 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px; /* Positioned at the bottom of the slide */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: pulse 1.5s infinite; /* Optional animation for visibility */
+    z-index: 10;
+  }
+  
+  /* Scroll Icon Styling */
+  .scroll-icon {
+    width: 40px; /* Set the size of the icon */
+    height: 40px;
+    opacity: 0.8; /* Slight transparency for a subtle effect */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg) brightness(80%) contrast(100%);
+}
+  
+  .scroll-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 1; /* Make fully opaque on hover */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Hide the indicator on the final slide (if you want a backup CSS-based solution) */
+  .slide-4 .scroll-indicator {
+    display: none;
+  }
+  
+
+
+/* General Styles */
 .home-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #1d1d1d;
+    color:#fff;
+  }
+  
+  .slide {
+    scroll-snap-align: start;
+    height: 80vh;
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column; /* Default vertical alignment */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon {
+    filter: brightness(0) invert(1); /* Converts the icon to white */
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    transition: filter 0.3s ease; /* Optional: Smooth transition for hover effects */
   }
   
-  .left-container,
-  .right-container {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+  .icon:hover {
+    filter: brightness(0.8) invert(0.9); /* Slight hover effect */
   }
   
-  .left-container h2,
-  .right-container h2 {
-    margin-bottom: 15px;
+  /* Title Slide */
+.title-slide {
+    display: flex;
+    flex-direction: row; /* Horizontal alignment for this slide */
+    height: 100vh;
+    overflow: hidden;
+    align-items: stretch; /* Stretch both sides to full height */
   }
   
-  .contact-form {
+  .title-left {
+    flex: 3; /* Takes up 3/7 of the width */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    padding-left: 200px; /* Add padding to align text away from edge */
+  }
+  
+  .title-text {
+    text-align: left; /* Align text to the left */
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .title-text h1 {
+    margin: 0; /* No extra margin between lines */
+  }
+  
+  .title-right {
+    flex: 4; /* Takes up 4/7 of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image doesn't overflow */
+  }
+  
+  .ocean-image {
+    width: 100%; /* Fill the container horizontally */
+    height: 100%; /* Fill the container vertically */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+  }
+  
+  /* Slide 2: About */
+/* Slide 2 */
+.slide-2 {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  .slide-2-left {
+    flex: 1; /* Occupies the left half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ensure the image scales well without cropping */
+  }
+  
+  .slide-2-right {
+    flex: 1; /* Still occupies the right half in terms of layout */
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Left-align text */
+    width: 60%; /* Stretch to 80% of the container width */
+    margin-left: 20px; /* Start at the very left side of the container */
+  }  
+  
+  .slide-2-right h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
   
-  .form-group {
-    margin-bottom: 15px;
+  .slide-2-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
   }
   
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  .key-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each benefit */
   }
   
-  .form-group input,
-  .form-group textarea {
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; /* Space between icon and text */
+  }
+  
+  .benefit-item .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .benefit-item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+/* Slide 3 */
+.slide-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  }
+  
+  .use-case-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the gallery vertically */
+    gap: 20px; /* Space between images */
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
   }
   
-  .form-group textarea {
-    resize: none;
-    height: 80px;
+  .use-case {
+    position: relative; /* Enable positioning for the label */
+    width: calc((100% - 80px) / 5); /* Dynamically fit 5 items side by side */
+    height: 60vh; /* All containers have the same height (60% of viewport height) */
+    overflow: hidden; /* Ensure content stays within the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff;
   }
   
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
+  .use-case-image {
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Ensure image scales proportionally */
+    border-radius: 10px; /* Rounded corners for the entire container */
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .use-case-label {
+    position: absolute; /* Position label over the image */
+    bottom: 0; /* Align label to the very bottom of the container */
+    left: 0; /* Ensure full-width alignment */
+    right: 0; /* Ensure full-width alignment */
+    width: 100%; /* Match the width of the container */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff; /* White text for contrast */
+    text-align: left;
+    font-size: 1rem;
+    padding: 10px; /* Add vertical padding for readability */
+    margin: 0; /* Remove any default margin */
+    border-radius: 0 0 10px 10px; /* Rounded corners for the label */
+    box-sizing: border-box; /* Ensure padding is included within the container size */
   }
   
-  .images-section {
-    margin-top: 20px;
+/* Slide 4 */
+.slide-4 {
+    display: flex;
+    justify-content: flex-start ; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 60vh; /* Reduce height to 60% of the viewport */
+    padding: 20px;
     text-align: center;
   }
   
-  .image-grid {
+  /* Contact Form */
+  .contact-form {
+    width: 33%; /* Restrict form to one-third of the slide width */
+    max-width: 400px; /* Cap the form width for larger screens */
+    background-color: rgba(219, 219, 219, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex;
-    justify-content: center;
-    gap: 7%;
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
   }
   
-  .square-image {
-    width: 40%; /* Adjust as needed */
-    height: 40%; /* Ensures a square shape */
-    object-fit: cover;
-    border: 1px solid #ddd;
+  /* Input and Textarea Styling */
+  .contact-form input,
+  .contact-form textarea {
+    /*width: 100%; /* Match the form width */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.3s ease;
   }
   
-  /* Media Query for Phones */
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column; /* Stack sections vertically */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #007bff; /* Highlighted border on focus */
+    outline: none; /* Remove default focus outline */
   }
 
-  .left-container,
-  .right-container {
-    margin-bottom: 20px; /* Add space between stacked sections */
+  .beta-checkbox-container {
+    display: flex;
+    align-items: center; /* Vertically align the checkbox and label */
+    gap: 10px; /* Space between the checkbox and the label */
+    justify-content: flex-start; /* Align content to the left */
   }
+  
+  .beta-checkbox {
+    width: 16px; /* Set checkbox width */
+    height: 16px; /* Set checkbox height */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .beta-checkbox-container label {
+    font-size: 1rem; /* Adjust font size for label text */
+    color: #333; /* Label text color */
+    cursor: pointer; /* Make the label clickable */
+  }
+  
+  
+  
+  /* Submit Button Styling */
+  .contact-form .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Response Message */
+  .response-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: green;
+    text-align: center;
+  }
+  
 
-  .image-grid {
-    flex-direction: column; /* Stack images vertically if needed */
-    gap: 10px;
-  }
+  @media (max-width: 768px) {
+    /* General Styles for Phone View */
+    .home-container {
+        scroll-snap-type: none;
+        height: auto; /* Allow container to expand with content */
+        overflow-y: auto;
+    }
 
-  .square-image {
-    width: 80%; /* Adjust size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center images */
+    .slide {
+        scroll-snap-align: none; /* Remove snap alignment */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+  
+    /* Title Slide (Company Name Only) */
+    .title-slide {
+      height: auto; /* Adjust dynamically based on content */
+      padding: 20px;
+    }
+
+    .title-slide h1 {
+        font-size: 3rem;
+    }
+  
+    .title-left {
+      width: 100%; /* Use full width for the company name */
+      text-align: center; /* Center the company name */
+      padding: 20px 0;
+    }
+  
+    .title-right {
+      display: none; /* Hide the ocean image */
+    }
+  
+    /* Slide 2: Product Image and Info */
+    .slide-2 {
+      padding: 20px 0;
+    }
+  
+    .slide-2-left {
+      width: 100%; /* Make the product image full-width */
+      text-align: center;
+    }
+  
+    .product-image {
+      width: 80%; /* Scale down the product image */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 20px;
+    }
+  
+    .slide-2-right {
+      width: 90%; /* Use full width for product info */
+      text-align: left; /* Center-align product info */
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    /* Slide 3: Use Case Cards Stacked Vertically */
+    .slide-3 {
+      padding: 20px 0;
+    }
+  
+    .use-case-gallery {
+      flex-direction: column; /* Stack use cases vertically */
+      gap: 20px; /* Add spacing between cards */
+      width: 100%;
+    }
+  
+    .use-case {
+      width: 100%; /* Adjust width for smaller screens */
+      height: 160px;
+      max-width: 300px; /* Limit max size */
+      margin: 0 auto; /* Center each use case card */
+    }
+  
+    .use-case-image {
+      width: 100%; /* Make the image fill the card */
+      height: 160px; /* Maintain consistent height for all images */
+    }
+  
+    .use-case-label {
+      font-size: 1rem; /* Adjust font size for readability */
+      padding: 10px;
+    }
+  
+    /* Slide 4: Form */
+    .slide-4 {
+      padding: 20px 0;
+    }
+  
+    .contact-form {
+        width: 90%; /* Restrict form to one-third of the screen width */
+        max-width: 400px; /* Ensure the form doesn't get too wide on larger screens */
+        background-color: rgba(219, 219, 219, 0.9); /* Semi-transparent white background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Spacing between form elements */
+      }
+    .contact-form-container {
+      width: 100%; /* Expand form to fill most of the screen */
+      max-width: none; /* Remove width limit */
+      padding: 20px;
+    }
+  
+    .contact-form-container h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .email-input,
+    .message-input {
+        font-size: 0.9rem; /* Slightly smaller inputs */
+        width: 100%; /* Ensure inputs match the width of the form */
+        box-sizing: border-box; /* Include padding and borders in width calculation */
+        padding: 10px; /* Add padding for readability */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+  
+    .submit-button {
+      font-size: 1rem; /* Maintain button size */
+    }
+
+    .scroll-indicator {
+        display: none; /* Completely hide the element */
+    }
+
   }
-}
+  
